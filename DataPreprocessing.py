@@ -360,6 +360,7 @@ def createTrainingSet(years, saveYears):
     return xTrain, yTrain
 
 def createAndSave(years, saveYears):
+    print(years, saveYears)
     xTrain, yTrain = createTrainingSet(years, saveYears)
     print ("Shape of xTrain:", xTrain.shape)
     print ("Shape of yTrain:", yTrain.shape)
@@ -376,9 +377,11 @@ except NameError:
 
 endYear = int(input('What year do you have data until?\n'))
 
-years = range(1993,endYear + 1)
+years = [z for z in range(1993, endYear+1) if z != 2020]
+# years = range(1993,endYear + 1)
 # Saves the team vectors for the following years
-saveYears = range(endYear - 4,endYear + 1)
+saveYears = [z for z in range(endYear-4, endYear+1) if z!= 2020]
+# saveYears = range(endYear - 4,endYear + 1)
 if os.path.exists("Data/PrecomputedMatrices/xTrain.npy") and os.path.exists("Data/PrecomputedMatrices/yTrain.npy"):
     print ('There is already a precomputed xTrain and yTrain.')
     response = input('Do you want to remove these files and create a new training set? (y/n) ')
