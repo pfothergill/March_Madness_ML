@@ -31,7 +31,10 @@ In this project, I hope to use machine learning to create a model that can predi
 
 ## Getting Started
 ### Depending on where you use python, you may have to invoke python by running python3 instead of python
-### example: ```python -m pip install virtualenv``` would be ```python3 -m pip install virtualenv```
+##### example: 
+```python -m pip install virtualenv``` 
+would be 
+```python3 -m pip install virtualenv```
 1. Download and unzip [this entire repository from GitHub](https://github.com/pfothergill/March-Madness-ML), either interactively, or by entering the following in your Terminal.
     ```bash
     git clone https://github.com/pfothergill/March-Madness-ML.git
@@ -47,11 +50,11 @@ In this project, I hope to use machine learning to create a model that can predi
     virtualenv --python=/usr/bin/python3.7 env
     source env/bin/activate
     ```
-5. Create a virtualenv and install the package dependencies
+4. Create a virtualenv and install the package dependencies
     ```bash
     pipenv install
     ```
-4. First create your xTrain and yTrain matrices by running 
+5. First create your xTrain and yTrain matrices by running 
     ```bash
     python DataPreprocessing.py
     ```
@@ -60,7 +63,7 @@ In this project, I hope to use machine learning to create a model that can predi
     python3 DataPreprocessing.py
     ```
    This may take a while (Still trying to figure out ways to make this faster).
-5. Then run your machine learning model  
+6. Then run your machine learning model  
     ```bash
     python MarchMadness.py
     ```
